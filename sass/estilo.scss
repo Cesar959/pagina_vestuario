@@ -1,0 +1,707 @@
+body
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+
+	background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+	background-repeat: no-repeat;
+
+	height: 100vh;
+	min-height: 800px;
+
+	display: -webkit-flex;
+  	display: flex;
+  	-webkit-align-items: center;
+  	align-items: center;
+  	-webkit-justify-content: center;
+  	justify-content: center;
+
+  	font-family: 'Josefin Sans', sans-serif;
+  	font-size: 16px;
+
+}
+
+
+.cartao
+{
+	width: 100%;
+	max-width: 1366px;
+	height: 800px;
+	background: linear-gradient(135deg,  hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+
+	.celula-texto
+	{
+		float: left;
+		width: 56%;
+		height: 100%;
+		background-image: url("../img/bg-pattern-desktop.svg");
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+
+	.celula-imagem
+	{
+		float: left;
+		width: 44%;
+
+		.logo-mobile
+		{
+			display: none;
+		}
+
+		.img-principal-mobile
+		{
+			display: none;
+		}
+	}
+
+
+	.container
+	{
+		width: 80%;
+		margin: auto;
+
+		.logo
+		{
+			padding-top: 60px;
+		}
+
+		.conteudo
+		{
+			padding-top: 100px;
+
+			.campo-email
+			{
+				padding-top: 25px;
+			}
+		}
+
+		h1
+		{
+			font-weight: 600;
+			font-size: 80px;
+			text-transform: uppercase;
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+
+		span 
+		{
+			font-weight: 300;
+			color: hsl(0, 93%, 68%);
+		}
+
+		p 
+		{
+			font-weight: 200;
+			color: hsl(0, 93%, 68%);
+			font-size: 22px;
+		}
+
+		.input-email
+		{
+			padding: 15px;
+			border-radius: 20px;
+			outline: none;
+			border-color:  hsl(0, 93%, 68%);
+			width: 80%;
+			border-width: thin;
+
+		}
+
+		// input[type=email] 
+		// {
+		// 		content: "  ";
+		// 		background-image: url("../img/icon-error.svg");
+		// 		background-repeat: no-repeat;
+		// 		background-position: right;
+
+		// }
+
+		::-webkit-input-placeholder 
+		{
+			color: hsl(0, 36%, 70%);
+			font-size: 18px;
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+	 		color: hsl(0, 36%, 70%);
+			font-size: 18px;  
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+	 		color: hsl(0, 36%, 70%);
+			font-size: 18px;  
+		}
+
+		:-ms-input-placeholder {  
+	   		color: hsl(0, 36%, 70%);
+			font-size: 18px;  
+		}
+
+		.botao-envio
+		{
+			padding: 17px;
+			color: red;
+			width: 90px;
+			border-radius: 50px;
+			outline: none;
+			border-color: hsl(0, 93%, 68%);
+			cursor: pointer;
+			margin-left: -40px;
+			background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+			border-width: thin;
+			box-shadow: 4px 8px 14px #969696;
+
+			&::after
+			{
+				content: "  ";
+				padding: 6px;
+				background-image: url("../img/icon-arrow.svg");
+				background-repeat: no-repeat;
+				background-position: center;
+				width: 12px;
+    			height: 20px;
+			}
+		}
+
+		.mensagem
+		{
+			color: red;
+			font-size: 14px;
+			font-family: 'Josefin Sans', sans-serif;
+			display: block;
+			padding: 5px;
+		}
+
+	}
+
+}
+
+
+// Meida querys
+
+@media screen and (max-width:1430px) 
+{
+	.cartao
+	{
+		width: 100%;
+		max-width: 1200px;
+		height: 692px;
+
+		.img-principal
+		{
+			width: 100%;
+			height: auto;
+		}
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 65px;
+			}
+
+			h1 
+			{
+    			font-size: 70px;
+			}
+
+			p 
+			{
+   				font-size: 20px;
+			}
+
+			.input-email 
+			{
+    			width: 72%;
+			}
+
+		}
+
+	}
+}
+
+@media screen and (max-width:1280px) 
+{
+	.cartao
+	{
+		max-width: 1100px;
+		height: 634px;
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 45px;
+			}
+
+			h1 
+			{
+    			font-size: 63px;
+			}
+
+			p 
+			{
+   				font-size: 18px;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+			}
+
+		}
+
+	}
+}
+
+
+@media screen and (max-width:1152px) 
+{
+	.cartao
+	{
+		max-width: 1000px;
+		height: 577px;
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 45px;
+			}
+
+			h1 
+			{
+    			font-size: 55px;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+			}
+
+		}
+
+	}
+}
+
+
+@media screen and (max-width:1024px)  
+{
+	.cartao
+	{
+		max-width: 900px;
+		height: 519px;
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 45px;
+
+    			.campo-email
+				{
+					padding-top: 18px;
+				}
+			}
+
+			h1 
+			{
+    			font-size: 46px;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+    			padding: 12px;
+			}
+
+			.botao-envio 
+			{
+				padding: 15px;
+				width: 80px;
+			}
+
+		}
+
+	}
+}
+
+
+@media screen and (max-width:992px)   
+{
+	.cartao
+	{
+		max-width: 850px;
+		height: 490px;
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 42px;
+
+    			.campo-email
+				{
+					padding-top: 10px;
+				}
+			}
+
+			h1 
+			{
+    			font-size: 42px;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+    			padding: 10px;
+			}
+
+			.botao-envio 
+			{
+				padding: 13px;
+				width: 70px;
+			}
+
+		}
+
+	}
+}
+
+
+@media screen and (max-width:868px)   
+{
+	.cartao
+	{
+		width: 500px;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column; 
+		height: 800px;
+
+
+		.celula-texto
+		{
+			width: 100%;
+			float: none;
+			display: inline-block;
+			order: 2;
+			background-image: none;
+		}
+
+		.celula-imagem 
+		{
+    		float: none;
+    		width: 100%;
+    		display: block;
+    		order: 1;
+
+    		.logo-mobile
+    		{
+    			display: block;
+    			padding: 25px 0px;
+    		}
+
+			.img-principal-mobile
+			{
+				display: block;
+				width: 100%;
+				height: auto;
+				vertical-align: bottom;
+			}
+
+		}
+
+		.img-principal
+		{
+			display: none;
+		}
+
+
+
+		.container
+		{
+
+			.logo
+			{
+				display: none;
+			}
+
+			.conteudo 
+			{
+    			padding-top: 42px;
+
+    			.campo-email
+				{
+					padding-top: 10px;
+				}
+			}
+
+			h1 
+			{
+    			font-size: 42px;
+    			text-align: center;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+   				text-align: center;
+			}
+
+			.input-email 
+			{
+    			width: 80%;
+    			padding: 10px;
+			}
+
+			.botao-envio 
+			{
+				padding: 13px;
+				width: 70px;
+			}
+
+			::-webkit-input-placeholder 
+			{
+				font-size: 15px;
+			}
+
+			:-moz-placeholder 
+			{ 
+			/* Firefox 18- */
+				font-size: 15px;  
+			}
+
+			::-moz-placeholder 
+			{  
+			/* Firefox 19+ */
+				font-size: 15px;  
+			}
+
+			:-ms-input-placeholder
+			{  
+				font-size: 15px;  
+			}
+
+
+		}
+
+	}
+}
+
+
+@media screen and (max-width:600px)   
+{
+	.cartao
+	{
+		width: 400px;
+
+		.container
+		{
+
+			.logo
+			{
+				display: none;
+			}
+
+			.conteudo 
+			{
+    			padding-top: 42px;
+
+    			.campo-email
+				{
+					padding-top: 10px;
+				}
+			}
+
+			h1 
+			{
+    			font-size: 42px;
+    			text-align: center;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+   				text-align: center;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+    			padding: 10px;
+			}
+
+			.botao-envio 
+			{
+				padding: 13px;
+				width: 60px;
+				margin-left: -22px;
+			}
+
+
+			::-webkit-input-placeholder 
+			{
+				font-size: 12px;
+			}
+
+			:-moz-placeholder 
+			{ /* Firefox 18- */
+				font-size: 12px;  
+			}
+
+			::-moz-placeholder 
+			{  /* Firefox 19+ */
+				font-size: 12px;  
+			}
+
+			:-ms-input-placeholder 
+			{  
+				font-size: 12px;  
+			}
+
+			.mensagem
+			{
+				font-size: 12px;
+			}
+
+
+		}
+	}
+
+	body
+	{
+		min-height: 820px;
+	}
+
+}
+
+@media screen and (max-width:414px)   
+{
+	.cartao
+	{
+		width: 300px;
+		height: 700px;
+
+		.celula-imagem
+		{
+			.logo-mobile
+			{
+				img 
+				{
+
+				width: 150px;
+				}
+			}
+		}
+
+		.container
+		{
+			.mensagem
+			{
+				font-size: 10px;
+			}
+		}
+
+	}
+}
+
+@media screen and (max-width:320px)   
+{
+	.cartao
+	{
+		width: 260px;
+		height: 660px;
+
+
+		.celula-imagem
+		{
+			.logo-mobile
+			{
+				img 
+				{
+					width: 120px;
+				}
+			}
+		}
+
+
+	}
+
+	body
+	{
+		min-height: 780px;
+	}
+
+}
+
+@media screen and (max-width:280px)   
+{
+	.cartao
+	{
+		width: 250px;
+		height: 680px;
+
+		.container
+		{
+
+			.conteudo 
+			{
+    			padding-top: 42px;
+
+    			.campo-email
+				{
+					padding-top: 10px;
+				}
+			}
+
+			h1 
+			{
+    			font-size: 39px;
+			}
+
+			p 
+			{
+   				font-size: 17px;
+			}
+
+			.input-email 
+			{
+    			width: 70%;
+    			padding: 10px;
+			}
+
+			.botao-envio 
+			{
+				padding: 13px;
+				width: 55px;
+				margin-left: -23px;
+			}
+
+		}
+
+	}
+}

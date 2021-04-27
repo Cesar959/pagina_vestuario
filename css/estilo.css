@@ -1,3 +1,418 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  background-repeat: no-repeat;
+  height: 100vh;
+  min-height: 800px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+}
 
+.cartao {
+  width: 100%;
+  max-width: 1366px;
+  height: 800px;
+  background: linear-gradient(135deg, white, #fff5f5);
+}
+.cartao .celula-texto {
+  float: left;
+  width: 56%;
+  height: 100%;
+  background-image: url("../img/bg-pattern-desktop.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cartao .celula-imagem {
+  float: left;
+  width: 44%;
+}
+.cartao .celula-imagem .logo-mobile {
+  display: none;
+}
+.cartao .celula-imagem .img-principal-mobile {
+  display: none;
+}
+.cartao .container {
+  width: 80%;
+  margin: auto;
+}
+.cartao .container .logo {
+  padding-top: 60px;
+}
+.cartao .container .conteudo {
+  padding-top: 100px;
+}
+.cartao .container .conteudo .campo-email {
+  padding-top: 25px;
+}
+.cartao .container h1 {
+  font-weight: 600;
+  font-size: 80px;
+  text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.cartao .container span {
+  font-weight: 300;
+  color: #f96262;
+}
+.cartao .container p {
+  font-weight: 200;
+  color: #f96262;
+  font-size: 22px;
+}
+.cartao .container .input-email {
+  padding: 15px;
+  border-radius: 20px;
+  outline: none;
+  border-color: #f96262;
+  width: 80%;
+  border-width: thin;
+}
+.cartao .container ::-webkit-input-placeholder {
+  color: #ce9797;
+  font-size: 18px;
+}
+.cartao .container :-moz-placeholder {
+  /* Firefox 18- */
+  color: #ce9797;
+  font-size: 18px;
+}
+.cartao .container ::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ce9797;
+  font-size: 18px;
+}
+.cartao .container :-ms-input-placeholder {
+  color: #ce9797;
+  font-size: 18px;
+}
+.cartao .container .botao-envio {
+  padding: 17px;
+  color: red;
+  width: 90px;
+  border-radius: 50px;
+  outline: none;
+  border-color: #f96262;
+  cursor: pointer;
+  margin-left: -40px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border-width: thin;
+  box-shadow: 4px 8px 14px #969696;
+}
+.cartao .container .botao-envio::after {
+  content: "  ";
+  padding: 6px;
+  background-image: url("../img/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 12px;
+  height: 20px;
+}
+.cartao .container .mensagem {
+  color: red;
+  font-size: 14px;
+  font-family: "Josefin Sans", sans-serif;
+  display: block;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1430px) {
+  .cartao {
+    width: 100%;
+    max-width: 1200px;
+    height: 692px;
+  }
+  .cartao .img-principal {
+    width: 100%;
+    height: auto;
+  }
+  .cartao .container .conteudo {
+    padding-top: 65px;
+  }
+  .cartao .container h1 {
+    font-size: 70px;
+  }
+  .cartao .container p {
+    font-size: 20px;
+  }
+  .cartao .container .input-email {
+    width: 72%;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .cartao {
+    max-width: 1100px;
+    height: 634px;
+  }
+  .cartao .container .conteudo {
+    padding-top: 45px;
+  }
+  .cartao .container h1 {
+    font-size: 63px;
+  }
+  .cartao .container p {
+    font-size: 18px;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1152px) {
+  .cartao {
+    max-width: 1000px;
+    height: 577px;
+  }
+  .cartao .container .conteudo {
+    padding-top: 45px;
+  }
+  .cartao .container h1 {
+    font-size: 55px;
+  }
+  .cartao .container p {
+    font-size: 17px;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cartao {
+    max-width: 900px;
+    height: 519px;
+  }
+  .cartao .container .conteudo {
+    padding-top: 45px;
+  }
+  .cartao .container .conteudo .campo-email {
+    padding-top: 18px;
+  }
+  .cartao .container h1 {
+    font-size: 46px;
+  }
+  .cartao .container p {
+    font-size: 17px;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+    padding: 12px;
+  }
+  .cartao .container .botao-envio {
+    padding: 15px;
+    width: 80px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .cartao {
+    max-width: 850px;
+    height: 490px;
+  }
+  .cartao .container .conteudo {
+    padding-top: 42px;
+  }
+  .cartao .container .conteudo .campo-email {
+    padding-top: 10px;
+  }
+  .cartao .container h1 {
+    font-size: 42px;
+  }
+  .cartao .container p {
+    font-size: 17px;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+    padding: 10px;
+  }
+  .cartao .container .botao-envio {
+    padding: 13px;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 868px) {
+  .cartao {
+    width: 500px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+  }
+  .cartao .celula-texto {
+    width: 100%;
+    float: none;
+    display: inline-block;
+    order: 2;
+    background-image: none;
+  }
+  .cartao .celula-imagem {
+    float: none;
+    width: 100%;
+    display: block;
+    order: 1;
+  }
+  .cartao .celula-imagem .logo-mobile {
+    display: block;
+    padding: 25px 0px;
+  }
+  .cartao .celula-imagem .img-principal-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  .cartao .img-principal {
+    display: none;
+  }
+  .cartao .container .logo {
+    display: none;
+  }
+  .cartao .container .conteudo {
+    padding-top: 42px;
+  }
+  .cartao .container .conteudo .campo-email {
+    padding-top: 10px;
+  }
+  .cartao .container h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .cartao .container p {
+    font-size: 17px;
+    text-align: center;
+  }
+  .cartao .container .input-email {
+    width: 80%;
+    padding: 10px;
+  }
+  .cartao .container .botao-envio {
+    padding: 13px;
+    width: 70px;
+  }
+  .cartao .container ::-webkit-input-placeholder {
+    font-size: 15px;
+  }
+  .cartao .container :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 15px;
+  }
+  .cartao .container ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 15px;
+  }
+  .cartao .container :-ms-input-placeholder {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .cartao {
+    width: 400px;
+  }
+  .cartao .container .logo {
+    display: none;
+  }
+  .cartao .container .conteudo {
+    padding-top: 42px;
+  }
+  .cartao .container .conteudo .campo-email {
+    padding-top: 10px;
+  }
+  .cartao .container h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .cartao .container p {
+    font-size: 17px;
+    text-align: center;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+    padding: 10px;
+  }
+  .cartao .container .botao-envio {
+    padding: 13px;
+    width: 60px;
+    margin-left: -22px;
+  }
+  .cartao .container ::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+  .cartao .container :-moz-placeholder {
+    /* Firefox 18- */
+    font-size: 12px;
+  }
+  .cartao .container ::-moz-placeholder {
+    /* Firefox 19+ */
+    font-size: 12px;
+  }
+  .cartao .container :-ms-input-placeholder {
+    font-size: 12px;
+  }
+  .cartao .container .mensagem {
+    font-size: 12px;
+  }
+
+  body {
+    min-height: 820px;
+  }
+}
+@media screen and (max-width: 414px) {
+  .cartao {
+    width: 300px;
+    height: 700px;
+  }
+  .cartao .celula-imagem .logo-mobile img {
+    width: 150px;
+  }
+  .cartao .container .mensagem {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .cartao {
+    width: 260px;
+    height: 660px;
+  }
+  .cartao .celula-imagem .logo-mobile img {
+    width: 120px;
+  }
+
+  body {
+    min-height: 780px;
+  }
+}
+@media screen and (max-width: 280px) {
+  .cartao {
+    width: 250px;
+    height: 680px;
+  }
+  .cartao .container .conteudo {
+    padding-top: 42px;
+  }
+  .cartao .container .conteudo .campo-email {
+    padding-top: 10px;
+  }
+  .cartao .container h1 {
+    font-size: 39px;
+  }
+  .cartao .container p {
+    font-size: 17px;
+  }
+  .cartao .container .input-email {
+    width: 70%;
+    padding: 10px;
+  }
+  .cartao .container .botao-envio {
+    padding: 13px;
+    width: 55px;
+    margin-left: -23px;
+  }
+}
 
 /*# sourceMappingURL=estilo.css.map */
