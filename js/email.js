@@ -1,12 +1,22 @@
-function validarEmail(){
+function validarEmail()
+{
+  
   var email = document.querySelector('#email');
   var mensagem = document.querySelector('#mensagem');
   var input = document.querySelector('input');
 
+  var email_verificao = document.querySelector('#email').value;
 
-  if(!email.checkValidity())
+  if (email_verificao == "" || email_verificao == null) 
+  {
+    mensagem.innerHTML = "Campo email é obrigatorio!";
+    mensagem.style.color = "red";
+
+  }
+  else if(!email.checkValidity())
   {
     mensagem.innerHTML = "Email invalido";
+    mensagem.style.color = "red";
     input.style.background = "url('js/icon-error.svg') no-repeat";
     input.style.backgroundPosition = "82% center"; 
   } 
